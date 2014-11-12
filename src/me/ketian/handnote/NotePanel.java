@@ -10,7 +10,7 @@ import java.awt.*;
 public class NotePanel extends JPanel {
     static final int LETTERS_PER_LINE = 20;
     static final int MARGIN = 2;
-    static final int LINES_PER_PAGE = 25;
+    static final int LINES_PER_PAGE = 23;
     static final int HEADER = 2;
     static final int FOOTER = 2;
 
@@ -27,8 +27,8 @@ public class NotePanel extends JPanel {
                 (MARGIN + InputPanel.LETTER_HEIGHT);
         width = (LETTERS_PER_LINE + 2) * (InputPanel.LETTER_WIDTH);
 
-        System.out.println(height);
-        System.out.println(width);
+        // System.out.println(height);
+        // System.out.println(width);
 
         letterHeight = InputPanel.LETTER_HEIGHT;
         letterWidth = InputPanel.LETTER_WIDTH;
@@ -37,6 +37,14 @@ public class NotePanel extends JPanel {
         setBorder(new LineBorder(Color.LIGHT_GRAY, 2));
         setPreferredSize(new Dimension(width, height));
 
+    }
+
+    public void clearData() {
+        int x = cursorX * letterWidth, y = cursorY * (letterHeight + MARGIN) + MARGIN;
+
+        for (int dx = 0; dx < letterWidth; ++dx)
+            for (int dy = 0; dy < letterHeight; ++ dy)
+                data[x + dx][y + dy] = 0;
     }
 
     public void setData(int[][] letter) {
@@ -96,5 +104,18 @@ public class NotePanel extends JPanel {
                     letterWidth * (LETTERS_PER_LINE), i * (MARGIN + letterHeight));
     }
 
+    public void backspace() {
+        --cursorX;
+        if (cursorX < 1) {
+            cursorX = LETTERS_PER_LINE - 1;
+            --cursorY;
+            if (cursorY < HEADER) {
+                cursorY = HEADER;
+                cursorX = 1;
+            }
+        }
+        clearData();
+        repaint();
+    }
 
 }

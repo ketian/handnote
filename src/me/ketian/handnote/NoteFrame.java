@@ -68,6 +68,14 @@ public class NoteFrame extends JFrame {
             }
         });
 
+        notePanel.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_BACK_SPACE, 0),
+                "pressed");
+        notePanel.getActionMap().put("pressed", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                notePanel.backspace();
+            }
+        });
         setLayout(new FlowLayout());
         add(notePanel);
         add(inputPanels);
@@ -77,7 +85,7 @@ public class NoteFrame extends JFrame {
     static public void main(String[] args) {
         NoteFrame noteFrame = new NoteFrame();
         noteFrame.setTitle("HandNote: a simple handwritten notebook");
-        noteFrame.setSize(750, 1100);
+        noteFrame.setSize(750, 1040);
         noteFrame.setLocationRelativeTo(null);
         noteFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         noteFrame.setResizable(false);
