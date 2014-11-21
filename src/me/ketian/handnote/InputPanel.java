@@ -26,6 +26,8 @@ public class InputPanel extends JPanel {
     private float[][] gaussian = new float[SCALE][SCALE];
     private Timer refreshTimer = new Timer(50, new TimerListener());
 
+    private boolean modified;
+
     class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             repaint();
@@ -46,6 +48,8 @@ public class InputPanel extends JPanel {
                 points[totalPoints][0] = x;
                 points[totalPoints][1] = y;
                 ++totalPoints;
+
+                modified = true;
 
                 refreshTimer.start();
             }
@@ -195,5 +199,14 @@ public class InputPanel extends JPanel {
             }
         return convData;
     }
+
+    public boolean isModified() {
+        return modified;
+    }
+
+    public void resetModified() {
+        this.modified = false;
+    }
+
 
 }
