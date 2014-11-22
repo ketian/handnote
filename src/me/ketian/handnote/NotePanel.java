@@ -1,8 +1,10 @@
 package me.ketian.handnote;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -164,6 +166,25 @@ public class NotePanel extends JPanel {
                 data[i][j] = dataTemp[i][j];
         repaint();
         cursorX = 1; cursorY = HEADER;
+    }
+
+    public void paint(String filename) {
+        BufferedImage theImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        for(int y = 0; y < height; y++){
+            for(int x = 0; x < width; x++){
+                int value = (255-data[x][y]) << 16 | (255-data[x][y]) << 8 | (255-data[x][y]);
+                theImage.setRGB(x, y, value);
+            }
+        }
+        File outputfile = new File(filename);
+        try {
+            ImageIO.write(theImage, "png", outputfile);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                    "Failure: file cannot be written!");
+        }
+        JOptionPane.showMessageDialog(this,
+                "Success: note has been painted at " + filename + " !");
     }
 
     public void cursorUp() {

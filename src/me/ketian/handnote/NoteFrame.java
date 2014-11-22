@@ -164,6 +164,23 @@ public class NoteFrame extends JFrame {
             }
         });
 
+        /// Print note
+        notePanel.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("P"),
+                "paint");
+        notePanel.getActionMap().put("paint", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String s = JOptionPane.showInputDialog(notePanel,
+                        "You want to paint the note at:",
+                        "Print Note",
+                        JOptionPane.QUESTION_MESSAGE
+                );
+                if ((s != null) && (s.length() > 0)) {
+                    notePanel.paint(s);
+                }
+            }
+        });
+
         setLayout(new FlowLayout());
         add(notePanel);
         add(inputPanels);
@@ -174,6 +191,7 @@ public class NoteFrame extends JFrame {
                         "Here are some hot keys that might be helpful:\n" +
                         "\t[O]pen: open a note\n" +
                         "\t[S]ave: save the note\n" +
+                        "\t[P]aint: paint the note\n" +
                         "\t[BackSpace]: delete a letter\n" +
                         "\t[Space]: move forward\n" +
                         "\t[Up], [Down], [Left] and [Right] to move the cursor\n",
