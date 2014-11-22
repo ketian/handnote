@@ -13,7 +13,7 @@ public class InputPanel extends JPanel {
     public static final int LETTER_HEIGHT = 28;
     public static final int SCALE = 5;
     public static final int SHADOW_FACTOR = 1;
-    public static final double PIXEL_SIZE_FACTOR = 0.38;
+    public static final double PIXEL_SIZE_FACTOR = 0.4;
     public static final int BLACK = 255;
     public static final int GRAY = 127;
     public static final int LIGHT_GRAY = 63;

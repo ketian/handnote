@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc3d81d-b00e-4c93-bc32-86e8d9f3349b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/ketian/handnote/NoteFrame.java" afterPath="$PROJECT_DIR$/src/me/ketian/handnote/NoteFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/ketian/handnote/InputPanel.java" afterPath="$PROJECT_DIR$/src/me/ketian/handnote/InputPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/ketian/handnote/NotePanel.java" afterPath="$PROJECT_DIR$/src/me/ketian/handnote/NotePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="handnote.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="NoteFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/ketian/handnote/NoteFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2282" max-vertical-offset="3401">
-              <caret line="193" column="55" selection-start-line="193" selection-start-column="55" selection-end-line="193" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2664" max-vertical-offset="3401">
+              <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
               <folding>
                 <element signature="e#5699#6168#0" expanded="true" />
                 <element signature="e#6167#6168#0" expanded="true" />
@@ -44,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotePanel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NotePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/ketian/handnote/NotePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41248304" vertical-offset="3021" max-vertical-offset="4370">
-              <caret line="175" column="45" selection-start-line="175" selection-start-column="45" selection-end-line="175" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="973" max-vertical-offset="4845">
+              <caret line="116" column="50" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputPanel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InputPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/ketian/handnote/InputPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3819">
-              <caret line="115" column="32" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+            <state vertical-scroll-proportion="4.2795115" vertical-offset="532" max-vertical-offset="3819">
+              <caret line="211" column="1" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,8 +78,8 @@
         <option value="$PROJECT_DIR$/test-jbdc/src/ODBConnectiontest.java" />
         <option value="$PROJECT_DIR$/test-jbdc/src/mainFrame.java" />
         <option value="$PROJECT_DIR$/src/me/ketian/handnote/IODialog.java" />
-        <option value="$PROJECT_DIR$/src/me/ketian/handnote/InputPanel.java" />
         <option value="$PROJECT_DIR$/src/me/ketian/handnote/NoteFrame.java" />
+        <option value="$PROJECT_DIR$/src/me/ketian/handnote/InputPanel.java" />
         <option value="$PROJECT_DIR$/src/me/ketian/handnote/NotePanel.java" />
       </list>
     </option>
@@ -291,12 +290,12 @@
       <workItem from="1415703101399" duration="13927000" />
       <workItem from="1416287810168" duration="56000" />
       <workItem from="1416554090196" duration="8709000" />
-      <workItem from="1416650819033" duration="1491000" />
+      <workItem from="1416650819033" duration="2213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24183000" />
+    <option name="totallyTimeSpent" value="24905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -456,26 +455,16 @@
         <state vertical-scroll-proportion="0.33333334" vertical-offset="57615" max-vertical-offset="183996">
           <caret line="3301" column="16" selection-start-line="3301" selection-start-column="16" selection-end-line="3301" selection-end-column="16" />
           <folding>
-            <element signature="e#114014#114015#0" expanded="true" />
-            <element signature="e#114061#114062#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/ketian/handnote/InputPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3819">
-          <caret line="115" column="32" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#114014#114015#0" expanded="false" />
+            <element signature="e#114061#114062#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/ketian/handnote/NoteFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2282" max-vertical-offset="3401">
-          <caret line="193" column="55" selection-start-line="193" selection-start-column="55" selection-end-line="193" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2664" max-vertical-offset="3401">
+          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
           <folding>
             <element signature="e#5699#6168#0" expanded="true" />
             <element signature="e#6167#6168#0" expanded="true" />
@@ -487,8 +476,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/ketian/handnote/NotePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41248304" vertical-offset="3021" max-vertical-offset="4370">
-          <caret line="175" column="45" selection-start-line="175" selection-start-column="45" selection-end-line="175" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="973" max-vertical-offset="4845">
+          <caret line="116" column="50" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/ketian/handnote/InputPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.2795115" vertical-offset="532" max-vertical-offset="3819">
+          <caret line="211" column="1" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

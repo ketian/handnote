@@ -111,7 +111,10 @@ public class NotePanel extends JPanel {
         File file = new File(filename);
         if (file.exists()) {
             int flag = JOptionPane.showConfirmDialog(this,
-                    "File already exists! Are you sure to overwrite it?");
+                    "File already exists! Are you sure to overwrite it?",
+                    "Confirm",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE);
             // System.out.println(flag);
             if (flag == 1) return;
         }
@@ -129,11 +132,15 @@ public class NotePanel extends JPanel {
             output.close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this,
-                    "Failure: cannot write to file!");
+                    "Failure: cannot write to file!",
+                    "Failure",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
         JOptionPane.showMessageDialog(this,
-                "Success: file " + filename + " has been written!");
+                "Success: file " + filename + " has been written!",
+                "Success",
+                JOptionPane.INFORMATION_MESSAGE);
 
     }
 
@@ -141,7 +148,9 @@ public class NotePanel extends JPanel {
         File file = new File(filename);
         if (!file.exists()) {
             JOptionPane.showMessageDialog(this,
-                    "Failure: file does not exists!");
+                    "Failure: file does not exists!",
+                    "Failure",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
         try {
@@ -155,11 +164,15 @@ public class NotePanel extends JPanel {
         } catch (Exception e) {
             System.out.println(e);
             JOptionPane.showMessageDialog(this,
-                    "Failure: cannot read file!");
+                    "Failure: cannot read file!",
+                    "Failure",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
         JOptionPane.showMessageDialog(this,
-                "Success: file " + filename + " has been opened!");
+                "Success: file " + filename + " has been opened!",
+                "Success",
+                JOptionPane.INFORMATION_MESSAGE);
 
         for (int i = 0; i < width; ++i)
             for (int j = 0; j < height; ++j)
@@ -176,15 +189,27 @@ public class NotePanel extends JPanel {
                 theImage.setRGB(x, y, value);
             }
         }
-        File outputfile = new File(filename);
+        File file = new File(filename);
+        if (file.exists()) {
+            int flag = JOptionPane.showConfirmDialog(this,
+                    "File already exists! Are you sure to overwrite it?",
+                    "Confirm",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE);
+            if (flag == 1) return;
+        }
         try {
-            ImageIO.write(theImage, "png", outputfile);
+            ImageIO.write(theImage, "png", file);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this,
-                    "Failure: file cannot be written!");
+                    "Failure: file cannot be written!",
+                    "Failure",
+                    JOptionPane.ERROR_MESSAGE);
         }
         JOptionPane.showMessageDialog(this,
-                "Success: note has been painted at " + filename + " !");
+                "Success: note has been painted at " + filename + " !",
+                "Success",
+                JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void cursorUp() {
