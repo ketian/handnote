@@ -13,7 +13,7 @@ public class InputPanel extends JPanel {
     public static final int LETTER_HEIGHT = 28;
     public static final int SCALE = 5;
     public static final int SHADOW_FACTOR = 1;
-    public static final double PIXEL_SIZE_FACTOR = 0.38;
+    public static final double PIXEL_SIZE_FACTOR = 0.4;
     public static final int BLACK = 255;
     public static final int GRAY = 127;
     public static final int LIGHT_GRAY = 63;
@@ -25,6 +25,8 @@ public class InputPanel extends JPanel {
     private float[][] convData = new float[LETTER_WIDTH][LETTER_HEIGHT];
     private float[][] gaussian = new float[SCALE][SCALE];
     private Timer refreshTimer = new Timer(50, new TimerListener());
+
+    private boolean modified;
 
     class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -46,6 +48,8 @@ public class InputPanel extends JPanel {
                 points[totalPoints][0] = x;
                 points[totalPoints][1] = y;
                 ++totalPoints;
+
+                modified = true;
 
                 refreshTimer.start();
             }
@@ -195,5 +199,14 @@ public class InputPanel extends JPanel {
             }
         return convData;
     }
+
+    public boolean isModified() {
+        return modified;
+    }
+
+    public void resetModified() {
+        this.modified = false;
+    }
+
 
 }
