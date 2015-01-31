@@ -202,8 +202,8 @@ public class NoteFrame extends JFrame {
     static public void main(String[] args) {
         NoteFrame noteFrame = new NoteFrame();
         noteFrame.setTitle("HandNote: a simple handwritten notebook");
-        // noteFrame.setSize(850, 800);
-        noteFrame.setSize(680, 980);
+        noteFrame.setSize(850, 800);
+        //noteFrame.setSize(680, 980);
         noteFrame.setLocationRelativeTo(null);
         noteFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         noteFrame.setResizable(false);

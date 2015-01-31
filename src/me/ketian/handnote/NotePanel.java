@@ -13,10 +13,10 @@ import java.util.Scanner;
  * Created by Ketian on 11/11/14.
  */
 public class NotePanel extends JPanel {
-    //static final int LETTERS_PER_LINE = 25; // for 13' inch
-    //static final int LINES_PER_PAGE = 17; // for 13' inch
-    static final int LETTERS_PER_LINE = 20; // for 1080p
-    static final int LINES_PER_PAGE = 23; // for 1080p
+    static final int LETTERS_PER_LINE = 25; // for 13' inch
+    static final int LINES_PER_PAGE = 17; // for 13' inch
+    //static final int LETTERS_PER_LINE = 20; // for 1080p
+    //static final int LINES_PER_PAGE = 23; // for 1080p
     static final int MARGIN = 2;
     static final int HEADER = 1;
     static final int FOOTER = 2;
